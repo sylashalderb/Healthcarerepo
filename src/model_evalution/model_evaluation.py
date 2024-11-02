@@ -3,6 +3,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 import joblib
+import os
+
+os.makedirs('metrics', exist_ok=True)
 
 # Load the processed data
 df = pd.read_csv('data/processed/final_data.csv')
